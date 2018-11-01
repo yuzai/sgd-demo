@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="./echarts.js"></script>
+    <script src="./echarts-gl.js"></script>
+    <link rel="stylesheet" href="./bootstrap.css" type="text/css" />
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="container">
+<p id="show">show result</p>
+<div class="row">
+  <div id="linear" style="width: 400px;height:400px;margin-top:40px;" class="col-5"></div>
+  <div id="threeD" style="width: 500px;height:400px;margin-left:20px;" class="col-5"></div>
+</div>
+  <button type="button" class="btn btn-primary">执行一次梯度下降</button>
+  <button type="button" class="btn btn-primary">执行10次梯度下降</button>
+  <button type="button" class="btn btn-primary">定时执行梯度下降</button>
+  <button type="button" class="btn btn-primary">执行100次梯度下降</button>
+  <div class="row" style="margin-top:20px;">
+    <table class="table col-6">
+      <tr>
+        <th>参数a</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+      <tr>
+        <th>参数b</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+      <tr>
+        <th>对a偏导alpha_d_a</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+      <tr>
+        <th>对b偏导alpha_d_b</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+      <tr>
+        <th>平方距离D</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+      <tr>
+        <th>梯度下降次数</th>
+        <th><span class="mySpan">Savings</span></th>
+      </tr>
+    </table>
+    <table class="col-5 offset-1 table" id="result_table">
+      <tr>
+        <th>解方程结果</th>
+      </tr>
+      <tr>
+        <th>参数a</th>
+        <th>0.7544987</th>
+      </tr>
+      <tr>
+        <th>参数b</th>
+        <th>3.7853470</th>
+      </tr>
+    </table>
+  </row>
+  </div>
+  <script src="./sgd.js"></script>
+</body>
+</html>
